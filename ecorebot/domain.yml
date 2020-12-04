@@ -1,0 +1,50 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- ask_for_licencas
+- licencas_atlassian
+- qtde_usuarios:
+    triggers: action_licences
+- nome_produto
+- qtde_users
+entities:
+- qtde_users
+- produto
+slots:
+  produto:
+    type: text
+    influence_conversation: true
+  qtde_users:
+    type: text
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Olá, como posso ajudar?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Aqui vai algo pra te alegrar:'
+  utter_did_that_help:
+  - text: Ajudou?
+  utter_happy:
+  - text: Ótimo!
+  utter_goodbye:
+  - text: Até breve
+  utter_iamabot:
+  - text: Sou um roboô
+  utter_ask_licencas:
+  - text: Quais tipos de licenciamentos?
+  utter_resp_licencas:
+  - text: Gostaria de saber sobre licenciamento de quais produtos?
+  utter_perg_qtde_usuarios:
+  - text: Qual a quantidade de usuários?
+actions:
+- action_licences
+- utter_resp_licencas_fim

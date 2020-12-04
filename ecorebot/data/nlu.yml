@@ -1,0 +1,59 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - Olá
+    - Oi
+    - Olá, tudo bem?
+    - Oi, como vai?
+    - Como vai?
+    - Bom dia
+    - Boa tarde
+    - Boa noite
+- intent: goodbye
+  examples: |
+    - Até logo
+    - Adeus
+    - Tchau
+    - Ok, obrigado.
+    - Tudo bem, obrigado.
+- intent: affirm
+  examples: |
+    - Sim
+    - Com certeza
+- intent: deny
+  examples: |
+    - Não
+    - Negativo
+- intent: mood_great
+  examples: |
+    - Perfeito
+    - Ótimo
+    - Excelente
+    - Muito bem
+- intent: mood_unhappy
+  examples: |
+    - Estou triste
+    - Meu dia foi horrível
+    - Não estou bem
+    - Não muito bem
+- intent: bot_challenge
+  examples: |
+    - Você é um robô?
+    - O que é você?
+    - Quem é você?
+- intent: ask_for_licencas
+  examples: |
+    - Gostaria de saber sobre licenciamentos
+    - Licenciamento Atlassian
+    - Licenciamento de Produtos Atlassian
+    - Licenças
+    - Olá, gostaria de saber sobre licenciamento Atlassian
+- intent: qtde_usuarios
+  examples: |
+    - [1000](qtde_users)
+    - [500](qtde_users)
+- intent: nome_produto
+  examples: |
+    - [jira](produto)
+    - [Jira](produto)

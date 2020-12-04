@@ -1,0 +1,67 @@
+version: "2.0"
+stories:
+- story: Story from Conversation ID 225b4e74e8dd4efc9baac2aedd377170
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Story from Conversation ID dd93f04fe35e4943801791a328ec4ab3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_for_licencas
+  - action: utter_resp_licencas
+  - intent: nome_produto
+    entities:
+    - produto: Jira
+  - slot_was_set:
+    - produto: Jira
+  - action: utter_perg_qtde_usuarios
+  - intent: qtde_usuarios
+    entities:
+    - qtde_users: '500'
+  - slot_was_set:
+    - qtde_users: '500'
+  - action: action_licences
+- story: Story from Conversation ID e3636d8443ee4b0ab6da79f60a91d972
+  steps:
+  - intent: ask_for_licencas
+  - action: utter_resp_licencas
+  - intent: nome_produto
+    entities:
+    - produto: Jira
+  - slot_was_set:
+    - produto: Jira
+  - action: utter_perg_qtde_usuarios
+  - intent: qtde_usuarios
+    entities:
+    - qtde_users: '500'
+  - slot_was_set:
+    - qtde_users: '500'
+  - action: action_licences
+- story: Story from Conversation ID a2378796faca4511999f91b9005bf8d4
+  steps:
+  - intent: ask_for_licencas
+  - action: utter_resp_licencas
+  - intent: nome_produto
+    entities:
+    - produto: Jira
+  - slot_was_set:
+    - produto: Jira
+  - action: utter_perg_qtde_usuarios
+  - intent: qtde_usuarios
+    entities:
+    - qtde_users: '100'
+  - slot_was_set:
+    - qtde_users: '100'
+  - action: action_licences
+rules:
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+- rule: Say 'Sou um robô' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
